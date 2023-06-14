@@ -1,22 +1,39 @@
 
- 
-function CounterApp() {
+ import { useState } from "react";
+function App() {
+ return(
+<>
+ <h1>String</h1>
+<StringDemo/>
+</>
 
-let counter =1;
-let likemeAction =()=>{
-  counter =counter+1;
+ );
 }
 
-  return (
-    <>
-   <h1>{counter}</h1>
-   <input type="button" value="like me" onclick={likemeAction}></input>
-    </>
-  
-  );
-  
+  function StringDemo(){
+    let[title,setTitle]=useState("Hello World");
+    let lowercaseAction=()=>{
+      title =title.toLowerCase();
+      setTitle(title);
+    }
+    let uppercaseAction=()=>{
+      title =title.toUpperCase();
+      setTitle(title);
+    }
 
-}
-export default CounterApp;
+return(
+<>
+<h1>{title}</h1>
+<input type="button" value="LowerCase" onClick={lowercaseAction} />
+<input type="button" value="Uppercase" onClick={uppercaseAction} />
+
+</>
+
+
+);
+  }
+
+
+export default App;
 
 
