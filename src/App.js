@@ -1,18 +1,22 @@
- import AppBody from './pages/AppBody';
- import AppHeader from './pages/AppHeader';
-import AppFooter from './pages/AppFooter';
+
  
-function App() {
+function CounterApp() {
+
+let counter =1;
+let likemeAction =()=>{
+  counter =counter+1;
+}
+
   return (
     <>
-    <AppHeader/>
-    <AppBody/>
-    <AppFooter/>
+   <h1>{counter}</h1>
+   <input type="button" value="like me" onclick={likemeAction}></input>
     </>
   
   );
-
+  
 
 }
+export default CounterApp;
 
-export default App;
+
