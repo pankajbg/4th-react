@@ -1,10 +1,18 @@
-
+ import AppBody from './pages/AppBody';
+ import AppHeader from './pages/AppHeader';
+import AppFooter from './pages/AppFooter';
+ 
 function App() {
   return (
-    <h1>
-      hello world
-    </h1>
+    <>
+    <AppHeader/>
+    <AppBody/>
+    <AppFooter/>
+    </>
+  
   );
+
+
 }
 
 export default App;
