@@ -3,29 +3,34 @@
 function App() {
  return(
 <>
- <h1>String</h1>
-<StringDemo/>
+ <h1>Counter</h1>
+<CounterApp/>
+<CounterApp/>
+<CounterApp/>
 </>
 
  );
 }
 
-  function StringDemo(){
-    let[title,setTitle]=useState("Hello World");
-    let lowercaseAction=()=>{
-      title =title.toLowerCase();
-      setTitle(title);
+  function CounterApp(){
+    let[counter,setCounter]=useState(1);
+    let LikemeAction=()=>{
+     counter =counter+1;
+     setCounter(counter);
     }
-    let uppercaseAction=()=>{
-      title =title.toUpperCase();
-      setTitle(title);
+    
+    let DisLikemeAction=()=>{
+     counter =counter-1;
+     setCounter(counter);
     }
+   
 
 return(
 <>
-<h1>{title}</h1>
-<input type="button" value="LowerCase" onClick={lowercaseAction} />
-<input type="button" value="Uppercase" onClick={uppercaseAction} />
+ <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt ad in nam, quod esse voluptas incidunt eius aspernatur est enim voluptate, aperiam consequuntur, dolorum delectus mollitia unde fuga accusantium accusamus.</h4>
+<h1>{counter}</h1>
+<input type="button" value="👍" onClick={LikemeAction} />
+<input type="button" value="👎" onClick={DisLikemeAction} />
 
 </>
 
